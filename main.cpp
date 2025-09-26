@@ -1,38 +1,36 @@
-/*****************************************
-* Автор:    Богданов.К.А.                *
-* Дата:     25.09.2025                   *
-* Название: Циклы с пред- и постусловием *
-******************************************/
+/*******************************
+* Автор:    Богданов.К.А.      *
+* Дата:     26.09.2025         *
+* Название: Линейные алгоритмы *
+********************************/
 
 #include <iostream>
 #include <cmath>
-#include <iomanip>
 
 using namespace std;
 
-int main()
-{
-    const int n = 9;
-    int i;
-    double V[n], c, m0, m;
+const double a = 0.52;
+const double b = -3.552;
+const double c = 3.24;
 
-    cout <<"c = ";
-    cin >> c;
+    double P = b / a;
+    double g = c / a;
 
-    cout <<"m0 = ";
-    cin >> m0;
+int main(){
 
-    cout << "Введите 9 элементов:" << endl;
-    for (i = 0; i < 9; i++) {
-        cin >> V[i];
+    double numerator = g;
+    double denominator = 2 * pow(-P / 3, 1.5);
+    double ratio = numerator / denominator;
 
-}
-    cout << "/t" << "V" << "/t/t" << "m" << endl;
-    cout << fixed << setprecision(2);
+    double alpha = acos(ratio);
+    
+    double x1 = -2 * sqrt(-P / 3) * cos(alpha / 3);
+    double x2 = 2 * sqrt(-P / 3) * cos((alpha + M_PI) / 3);
+    double x3 = 2 * sqrt(-P / 3) * cos((alpha - M_PI) / 3);
 
-    for (int j = 0; j < 9; j++) {
-        m = m0 * sqrt(1 / (1 - pow(V[j] / c, 2)));
-        cout << "/t" << V[j] << "/t/t" << m << endl;
-    }
-        return 0;
+    cout << "x1 =" << x1
+         << "x2 =" << x2
+         << "x3 =" << x3 << endl;
+     
+    return 0;
 }
