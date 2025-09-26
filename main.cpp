@@ -28,9 +28,11 @@ int main(){
     double x2 = 2 * sqrt(-P / 3) * cos((alpha + M_PI) / 3);
     double x3 = 2 * sqrt(-P / 3) * cos((alpha - M_PI) / 3);
 
-    cout << "x1 =" << x1
-         << "x2 =" << x2
-         << "x3 =" << x3 << endl;
+    cout 
+    << "x1 =" << x1 << endl
+    << "x2 =" << x2 << endl
+    << "x3 =" << x3 << endl;
+    
      
     return 0;
 }
